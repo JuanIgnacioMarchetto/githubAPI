@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GitHubProfile from './GitHubProfile';
-
+import GitHubProfile from './components/GitHubProfile';
 const App = () => {
   const myGitHubUsername = 'JuanIgnacioMarchetto';
-
   return (
     <div>
       <GitHubProfile username={myGitHubUsername} />
@@ -19,5 +17,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-
 export default App;
+
+
+
