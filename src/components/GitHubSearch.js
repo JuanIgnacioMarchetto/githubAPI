@@ -44,24 +44,22 @@ const GitHubSearch = () => {
                 onChange={handleInputChange}
                 style={{ marginBottom: '10px' }}
             />
-            {loading ? (
-                <p>Cargando...</p>
-            ) : (
-                <ul>
-                    {searchResults.map(user => (
-                        <li key={user.id}>
-                            <img src={user.avatar_url} alt="Avatar" style={{ width: '50px', borderRadius: '50%' }} />
-                            <a href={user.html_url} target="_blank" rel="noopener noreferrer">{user.login}</a>
-                        </li>
-                    ))}
-                </ul>
-            )}
+            <div className="scrollable-list">
+                {loading ? (
+                    <p>Cargando...</p>
+                ) : (
+                    <ul>
+                        {searchResults.map(user => (
+                            <li key={user.id}>
+                                <img src={user.avatar_url} alt="Avatar" style={{ width: '50px', borderRadius: '50%' }} />
+                                <a href={user.html_url} target="_blank" rel="noopener noreferrer">{user.login}</a>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </div>
         </div>
     );
 };
 
 export default GitHubSearch;
-
-
-
-
